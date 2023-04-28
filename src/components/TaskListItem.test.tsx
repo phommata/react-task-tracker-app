@@ -9,7 +9,7 @@ import {
 
 describe("TaskListItem", () => {
   // TODO: Step 3
-  it.skip("correctly renders a Task List Item", () => {
+  it("correctly renders a Task List Item", () => {
     const randomDate = makeRandomDateString();
     const randomTaskText = makeRandomTaskText();
 

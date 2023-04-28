@@ -9,14 +9,14 @@ import {
 
 describe("TaskList", () => {
   // TODO: Step 4
-  it.skip("displays a default message when no tasks have been provided", () => {
+  it("displays a default message when no tasks have been provided", () => {
     render(<TaskList tasks={[]} />);
 
     expect(screen.getByText("No tasks have been added yet."));
   });
 
   // TODO: Step 5
-  it.skip("correctly renders a list of TaskItems when provided", async () => {
+  it("correctly renders a list of TaskItems when provided", async () => {
     const randomDate1 = makeRandomDateString();
     const randomDate2 = makeRandomDateString();
     const randomTaskText1 = makeRandomTaskText();

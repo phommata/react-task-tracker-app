@@ -7,4 +7,9 @@ export type TaskItem = {
 
 type Props = TaskItem;
 
-export const TaskListItem: React.FC<Props> = ({ title, date }) => <></>;
+export const TaskListItem: React.FC<Props> = ({ title, date }) => (
+  <>
+    <p>{title}</p>
+    <p>{date}</p>
+  </>
+);

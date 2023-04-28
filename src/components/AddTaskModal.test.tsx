@@ -17,7 +17,7 @@ describe("Add Task Modal", () => {
   });
 
   // TODO: Step 6
-  it.skip("allows a user to fill in a task title in the Task Title input", () => {
+  it("allows a user to fill in a task title in the Task Title input", () => {
     const inputElement = screen.getByLabelText(
       "Task Title"
     ) as HTMLInputElement;
@@ -28,14 +28,14 @@ describe("Add Task Modal", () => {
   });
 
   // TODO: Step 7
-  it.skip("disables the submit button if required fields are not filled", () => {
+  it("disables the submit button if required fields are not filled", () => {
     userEvent.type(screen.getByLabelText("Task Title"), "");
 
     expect(screen.getByText("Submit")).toBeDisabled();
   });
 
   // TODO: Step 8
-  it.skip("enables submit button if required fields are provided", () => {
+  it("enables submit button if required fields are provided", () => {
     const titleInput = screen.getByLabelText("Task Title") as HTMLInputElement;
 
     userEvent.type(titleInput, "Test Title");
@@ -45,7 +45,7 @@ describe("Add Task Modal", () => {
   });
 
   // TODO: Step 9
-  it.skip("calls onSubmit with the proper input values when Submit is clicked", () => {
+  it("calls onSubmit with the proper input values when Submit is clicked", () => {
     const titleInput = screen.getByLabelText("Task Title") as HTMLInputElement;
 
     userEvent.type(titleInput, "Test Title");
@@ -58,7 +58,7 @@ describe("Add Task Modal", () => {
   });
 
   // TODO: Step 10
-  it.skip("clears the task title field when submit is clicked", () => {
+  it("clears the task title field when submit is clicked", () => {
     const titleInput = screen.getByLabelText("Task Title") as HTMLInputElement;
 
     userEvent.type(titleInput, "Test Title");
@@ -68,7 +68,7 @@ describe("Add Task Modal", () => {
   });
 
   // TODO: Step 11
-  it.skip("calls closeModal when the 'Cancel' button is clicked", () => {
+  it("calls closeModal when the 'Cancel' button is clicked", () => {
     userEvent.click(screen.getByText("Cancel"));
 
     waitFor(() => expect(mockCloseModal).toHaveBeenCalled());
