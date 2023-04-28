@@ -11,7 +11,9 @@ export default function App() {
   const [submit, setSubmit] = useState(false);
   const [tasks, setTasks] = useState([]);
 
-  const addTaskHandler = (taskItem: TaskItem) => {};
+  const addTaskHandler = (taskItem: TaskItem) => {
+    setTasks([...tasks, taskItem]);
+  };
 
   const toggleModal = () => {
     setAddTaskClicked(true);
@@ -20,7 +22,7 @@ export default function App() {
   const onSubmit = (taskItem: TaskItem) => {
     setAddTaskClicked(false);
     setSubmit(true);
-    setTasks([...tasks, taskItem]);
+    addTaskHandler(taskItem);
   };
 
   const closeModal = () => {
